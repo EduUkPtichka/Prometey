@@ -16,6 +16,13 @@ dependencyResolutionManagement {
         mavenCentral()
         maven("https://maven.pkg.jetbrains.space/public/p/compose/dev")
     }
+
 }
 
-include(":common-core")
+// Api
+include(":prometey-api")
+
+// Общий для Compiler plugin и Compiler plugin backend
+include(":prometey-compiler-shared")
+
+include(":prometey-compiler-plugin")

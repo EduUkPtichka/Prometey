@@ -1,8 +1,21 @@
 [versions]
+#   --- PLUGINS --- :
+
+# Jetbrains:
 #   https://plugins.gradle.org/plugin/org.jetbrains.kotlin.multiplatform
 jetbrains-kotlinMultiplatform = "2.0.0-RC1"
+#   https://plugins.gradle.org/plugin/org.jetbrains.kotlin.jvm
+jetbrains-kotlinJvm = "2.0.0-RC1"
+
+#   --- Version --- :
+
+# Jetbrains:
+#   https://central.sonatype.com/artifact/org.jetbrains.kotlin/kotlin-compiler-embeddable/overview
+jetbrains-kotlinCompilerEmbeddable = "2.0.0-RC1"
 
 [libraries]
+jetbrains-kotlin-compiler-embeddable = { module = "org.jetbrains.kotlin:kotlin-compiler-embeddable", version.ref = "jetbrains-kotlinCompilerEmbeddable"}
 
 [plugins]
-jetbrains-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "jetbrains-kotlinMultiplatform" }
+jetbrains-kotlin-multiplatform-plugins = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "jetbrains-kotlinMultiplatform" }
+jetbrains-kotlin-jvm-plugins = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrains-kotlinJvm"}
